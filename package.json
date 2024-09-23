@@ -1,0 +1,35 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "React",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saloni1500/React.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Saloni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saloni1500/React/issues"
+  },
+  "homepage": "https://github.com/Saloni1500/React#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
