@@ -2,7 +2,8 @@ import { MENU_IMG_URL } from "../utils/constants";
 
 const MenuCard = (props) => {
   const { menuCard } = props;
-  const { name, price, description, imageId } = menuCard?.card?.info;
+  const { name, defaultPrice, price, description, imageId } =
+    menuCard?.card?.info;
 
   return (
     <div className="menu-card-container">
@@ -13,7 +14,7 @@ const MenuCard = (props) => {
         <div>
           <p className="menu-price">
             <span>&#8377;</span>
-            {price / 100}
+            {defaultPrice / 100 || price / 100}
           </p>
         </div>
         <div>

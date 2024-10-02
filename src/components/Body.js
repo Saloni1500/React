@@ -1,29 +1,15 @@
-import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import { RESTO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
-
+import useRestaurantCard from "../utils/useRestaurantCard";
+import { useState } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import Game from "./Game";
 const Body = () => {
-  const [listofRestaurants, setListofRestaurants] = useState([]);
-  const [FilteredRestaurant, setFilteredRestaurant] = useState([]);
   const [SearchText, setSearchText] = useState("");
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(RESTO_URL);
-    const json = await data.json();
-    setListofRestaurants(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFilteredRestaurant(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
-
+  const { listofRestaurants, FilteredRestaurant } = useRestaurantCard();
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) return <Game />;
   return listofRestaurants.length === 0 ? (
     <Shimmer />
   ) : (
@@ -53,7 +39,6 @@ const Body = () => {
                   cuisines.toLowerCase().includes(SearchText.toLowerCase())
                 );
               });
-
               setFilteredRestaurant(filteredRestaurant);
             }}
           >
@@ -86,5 +71,4 @@ const Body = () => {
     </div>
   );
 };
-
 export default Body;

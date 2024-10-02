@@ -207,7 +207,7 @@ input{
 }
 .rating-container{
     margin-top: 25px;
-    height: 200px;
+    height: 150px;
     width: 730px;
     border-radius: 20px;
     border: 1px solid #e5e6e4;
@@ -248,20 +248,6 @@ input{
     color: #8d99ae; 
     font-size: 17px;
 }
-.cost-txt{
-     margin-left: 25px;
-}
-.line{
-    background: #e9ecef;
-    color: #e9ecef;
-    border-color: #e9ecef;
-    height: 1px;
-    margin-top: 15px;
-}
-.fees-txt{
-    margin-top: 10px;
-    margin-left: 15px;
-}
 .menu-div, .shimmer-menu{
     margin-top: 50px;
     height:40px;
@@ -296,6 +282,9 @@ input{
     margin-top: 10px;
     font-size: 17px;
     margin-left: 5px;
+}
+.cost-txt{
+    margin-left: 40px;
 }
 .menu-offer{
 margin-top: 15px;
@@ -412,4 +401,91 @@ margin-top: 15px;
     height:40px;
     width:150px;
     border-radius: 20px;
+}
+.abt{
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.user-card{
+    margin-top: 20px;
+    border: 1px solid black;
+    font-size: 20px;
+    padding: 20px;
+}
+.game-div{
+    margin-top: -20px;
+    /* background-color: #9d8189; */
+    text-align: center;
+}
+#heading{
+    font-size: 6vmin;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 40px;
+    margin-bottom: 6px;
+
+}
+.container{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #ffcad4;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5); 
+    font-size: 8vmin;
+    color: #191913;
+
+}
+#reset-btn{
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border: none;
+    margin-top: 2px;
+}
+#new-btn{
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    background-color: #191913;
+    color: #fff;
+    border: none;
+    margin-top:50px;
+    margin-bottom: 10px;
+  
+}
+#msg{
+    font-size: 7vmin;
+}
+.hide{
+    display: none;
+}
+.msg-container{
+    height: 800px; 
+    flex-direction: column; 
+    font-family: "Playwrite ES", cursive;
+    font-optical-sizing: auto;
+    font-weight: 50px;
+    font-style: normal;
+    margin-top: 100px;
 }
